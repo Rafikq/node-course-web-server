@@ -30,10 +30,16 @@ hbs.registerHelper('getCurrentYear', () => {
 app.get('/', (req, res) => { // request, response
     // res.send('Hello world !!!');
     res.render('home.hbs', {
-        welcomeMessage: 'Hello on my website',
+        welcomeMessage: 'Hello on my website. Pozdro dla Patrykosa i Jankosa',
         pageTitle: 'Home page'
     })
 });
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    })
+})
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
